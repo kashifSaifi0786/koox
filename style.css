@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+li {
+  list-style: none;
+  cursor: pointer;
+  color: #215732;
+}
+.container {
+  height: 100vh;
+  position: absolute;
+  overflow: hidden;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+.header ul {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  gap: 14px;
+}
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#logo {
+  height: 100px;
+  width: 140px;
+  background-color: #215732;
+  color: white;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+}
+.center {
+  height: 80vh;
+  width: 80%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+.center::-webkit-scrollbar {
+  display: none;
+}
+.wrapper {
+  transition: 1s all ease-in-out;
+}
+.slide {
+  scroll-snap-align: start;
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.title {
+  color: #215732;
+  font-size: 80px;
+  font-weight: bold;
+}
+.heading {
+  color: #215732;
+  font-size: 40px;
+  margin: 20px 0;
+}
+.subheading {
+  color: #215732;
+  font-size: 24px;
+}
+.burger {
+  height: 100px;
+  width: 130px;
+  background-color: #215732;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+.line1,
+.line3 {
+  width: 3rem;
+  height: 0.2rem;
+  margin: 0.2rem;
+  background-color: white;
+  pointer-events: none;
+  transition: 0.5s all ease-in-out;
+}
+.line1.active {
+  transform: translateY(4px) rotate(45deg);
+}
+.line2.active {
+  display: none;
+}
+.line3.active {
+  transform: translateY(-4px) rotate(-45deg);
+}
+.line2 {
+  width: 2rem;
+  height: 0.2rem;
+  margin: 0.2rem;
+  background-color: white;
+  pointer-events: none;
+}
+
+.footer {
+  padding: 14px;
+}
+
+.nav-section {
+  height: 90vh;
+  width: 78%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  position: absolute;
+  top: 100vh;
+  left: 140px;
+  transition: 1s ease-in-out;
+}
+.nav-section.active {
+  transform: translateY(-90vh);
+}
